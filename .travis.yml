@@ -1,0 +1,8 @@
+branches:
+  only:
+    - main
+language: rust
+notifications:
+  email: false
+script:
+  - cargo build --release

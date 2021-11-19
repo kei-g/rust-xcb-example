@@ -1,0 +1,19 @@
+name: build
+on:
+  push:
+    branches: [ main ]
+jobs:
+  npm-test:
+    runs-on: ubuntu-latest
+    name: Build
+    steps:
+      - uses: actions/checkout@v2
+      - name: Setup
+        uses: actions-rs/tolchain@v1
+        with:
+          toolchain: stable
+      - name: Build
+        uses: actions-rs/cargo@v1
+        with:
+          args: --release
+          command: build
