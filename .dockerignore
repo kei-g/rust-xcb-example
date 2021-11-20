@@ -1,0 +1,5 @@
+**/*.md
+**/.*
+**/Cargo.lock
+**/Dockerfile
+**/LICENSE
